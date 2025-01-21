@@ -68,11 +68,11 @@ puts "If want 100$ worth of tamales the amount of pieces would get would be #{qu
 #   puts "Sorry, please provide an integer."
 # end
 
-puts " Enter your first number"
-first_num = gets.chomp.to_i
-#puts first_num
+# puts " Enter your first number"
+# first_num = gets.chomp.to_i
+# #puts first_num
 
-puts "Choose an operation(add, subtract, multiply, or divide)"
-operation = gets.chomp
+# puts "Choose an operation(add, subtract, multiply, or divide)"
+# operation = gets.chomp
 
-if 
+# if 
