@@ -24,7 +24,7 @@ names = ["Noah", "Leon", "Jess"]
 # p names
 
 #array_name.delete_at(index)  (REMOVES FROM SPECIFIC INDEX)
-#array_name.insert(index, specific_data) (ADDS TO SPECIFIC INDEX)
+#array_name.`insert(index, specific_data) (ADDS TO SPECIFIC INDEX)
 
 #EXERCISE 1,2
 

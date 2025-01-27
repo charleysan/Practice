@@ -51,12 +51,12 @@ nums = [1, 3, 5, 7]
 list =["Leon", "Bucket", "Car", "Abs", "tech", "Patrick", "Tan"]
 list2 = ["Link", "Zelda", "Tri", "Midna", "Nix", "man", "dunk"]
 
-# def filter_long_words(word)
+# def filter_long_words(word)  # makes new array only taking long words
 #   words =[]
 
 #   word.each do |l|
 #     if l.length > 3
-#       words.push(l)
+#       words.push(l)  #.push works cause in loop its the first index why .pop does not work
 #      end
 #   end
 #   return words
@@ -64,7 +64,7 @@ list2 = ["Link", "Zelda", "Tri", "Midna", "Nix", "man", "dunk"]
 
 # puts filter_long_words(list)
 
-# def filter_short_words(word)
+# def filter_short_words(word)  # makes array by removing short words
 #   words =[]
 
 #   word.each do |l|
@@ -78,26 +78,41 @@ list2 = ["Link", "Zelda", "Tri", "Midna", "Nix", "man", "dunk"]
 # end
 
 # puts filter_short_words(list2)
-scores = [50, 60, 75, 89, 90, 98, 30]
 
-def grade_students(score)
-  score.each do |n|  # dont forget the variable needs to be in pipe "||" not ()
-   if n >= 90
-      puts "A - #{n}"
-    elsif
-      n < 90 && n >= 80
-     puts "B - #{n}"
-    elsif
-      n < 80 && n >= 70
-      puts "C - #{n}" 
-    elsif
-      n < 70 && n >= 60
-      puts "D - #{n}"
-   else
-      puts "F - #{n}"
-    end
+grades = [50, 60, 75, 89, 90, 98, 30]
+
+# def grade_students(score)
+#   score.each do |n|  # dont forget the variable needs to be in pipe "||" not ()
+#    if n >= 90
+#       puts "A - #{n}"
+#     elsif
+#       n < 90 && n >= 80
+#      puts "B - #{n}"
+#     elsif
+#       n < 80 && n >= 70
+#       puts "C - #{n}" 
+#     elsif
+#       n < 70 && n >= 60
+#       puts "D - #{n}"
+#    else
+#       puts "F - #{n}"
+#     end
+#   end
+# end
+
+
+# grade_students(grades)
+
+teams = [
+  ["Alice", "Bob"],     # team 1
+  ["Charlie", "David"], # team 2
+  ["Eve", "Frank"]      # team 3
+]
+team_name = ["cool name", "not cool name", "very cool name"]
+
+teams.each_with_index do |team, index|
+  puts team_name[index]
+  team.each do |member|
+    puts " - #{member}"
   end
 end
-
-
-grade_students(scores)
