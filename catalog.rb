@@ -7,20 +7,23 @@
 # Use arrays and hashes to store item data.
 # Implement a simple menu to interact with the catalog.
 
+#Challenges make tags into an array, take in decimals
+
 list = []
 
 def add_item(task_list)
-
+    tag_list=[]
   puts "Please enter item name"
   name = gets.chomp
   puts "Please enter item category"
   category = gets.chomp
   puts "Please enter price"
-  price = gets.chomp.to_i
+  price = gets.chomp.to_f
   puts "Please input associated tag"
   tags = gets.chomp
+  tag_list << tags
 
-  task_list << { name: name, category: category, price: price, tags: tags }
+  task_list << { name: name, category: category, price: price, tags: tag_list }
   p task_list
   return task_list
 end
@@ -33,8 +36,8 @@ def view_item(task_list)
     task_list.each do |files| #Array and hashes need to print one at a time
     p "NAME #{files[:name]}"
     p "CATEGORY #{files[:category]}"
-    p "PRICE #{files[:price]}"
-    p "TAGS #{files[:tags]}"
+    p "PRICE $#{files[:price]}"
+    puts "TAGS #{files[:tags]}"
     p "----------"
     end
   end  
