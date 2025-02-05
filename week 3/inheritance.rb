@@ -177,4 +177,38 @@ puts reptile1.sound
 
 
 
-
+zoo = []
+loop do
+  puts “Enter animal type: \n 1. mammal \n 2. bird \n 3. reptile \n”
+  type =  gets.chomp.to_i
+  puts “Species”
+  species = gets.chomp
+  puts “Feed:”
+  feed = gets.chomp
+  puts “Sound:”
+  sound = gets.chomp
+  puts “Skin type:”
+  skin = gets.chomp
+  case type
+  when 1
+    zoo << Mammal.new(feed, sound, species, skin)
+  when 2
+    zoo << Bird.new(feed, sound, species, skin)
+  when 3
+    zoo << Reptile.new(feed, sound, species, skin)
+  else
+    “Invalid input. Please select from options 1 to 3.”
+    next
+  end
+  puts “Animals in the zoo:”
+  zoo.each_with_index do |animal, index|
+    puts “#{index +1}. #{animal.species}”
+    puts animal.intro
+    puts animal.feed
+    puts animal.sound
+    puts “\n ”
+  end
+  puts “Would you like to add another animal?”
+  continue = gets.chomp.downcase
+  break unless continue == “yes”
+end
