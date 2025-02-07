@@ -1,11 +1,11 @@
 require_relative '../inheritance'
 
-# RSpec.describe Person do
-#   describe '#initialize' do
-#     it 'create a new Person with a name and age' do
-#       person = Person.new("Alanna", 23)
+# RSpec.describe Person do  #for the Class or module
+#   describe '#initialize' do   #method or function
+#     it 'create a new Person with a name and age' do  #what the method should do
+#       person = Person.new("Alanna", 23)   #create the instance/object
 #       expect(person.name).to eq("Alanna")
-#       expect(person.age).to eq(23)
+#       expect(person.age).to eq(23)          #two lines for exepectations of program to run
 #     end
 
 #     it 'raises an error if age is negative' do
@@ -14,8 +14,8 @@ require_relative '../inheritance'
 #   end
 # end
 
-RSpec.describe Person do
-  describe '#initialize' do
+RSpec.describe Person do  #for the Class or module
+  describe '#initialize' do  #method or function
   let(:person) { Person,new("Noah", 25) }
 
   it "has a name" do
