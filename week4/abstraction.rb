@@ -186,53 +186,147 @@
 # Observe the output to confirm the classes are working correctly together.
 
 
-class Battery
-  def charge
-  puts "Battery is charging..."
-  end
-end
+# class Battery
+#   def charge
+#   puts "Battery is charging..."
+#   end
+# end
 
-class Storage
-  def read_data
-    puts "Reading data from storage..."
-  end
-end
+# class Storage
+#   def read_data
+#     puts "Reading data from storage..."
+#   end
+# end
 
-class Laptop
-  def initialize
-    @battery = Battery.new
-    @storage = Storage.new
-  end
+# class Laptop
+#   def initialize
+#     @battery = Battery.new
+#     @storage = Storage.new
+#   end
 
-  def boot
-    power_on
-    load_files
-  end
+#   def boot
+#     power_on
+#     load_files
+#   end
 
 
-  private
-  def power_on
-    @battery.charge
-    puts "...Laptop is powering on...."
-  end
+#   private
+#   def power_on
+#     @battery.charge
+#     puts "...Laptop is powering on...."
+#   end
 
-  def load_files
-    @storage.read_data
-    puts "files loaded into memory..."
-  end
-end
+#   def load_files
+#     @storage.read_data
+#     puts "files loaded into memory..."
+#   end
+# end
 
-# battery = Battery.new
-# battery.charge
+# # battery = Battery.new
+# # battery.charge
 
-# storage = Storage.new
-# storage.read_data
+# # storage = Storage.new
+# # storage.read_data
 
-laptop = Laptop.new
-# laptop.power_on  #before private
-# laptop.load_files  #before private was added
+# laptop = Laptop.new
+# # laptop.power_on  #before private
+# # laptop.load_files  #before private was added
 
-laptop.boot  #adding method to call functions in private section
+# laptop.boot  #adding method to call functions in private section
 
 #===================================================
-#AGGREGATION
+#AGGREGATION  can have one without the other
+
+# class Player
+#   attr_accessor :name
+
+#   def initialize(name)
+#     @name = name
+#   end
+
+#   def display
+#     puts "Player: #{@name}"
+#   end
+# end
+
+# class Team
+#   def initialize(name)
+#     @name = name
+#     @players = []
+#   end
+
+#   def add_player(player)
+#     @players << player
+#     puts "#{player.name} has joined #{@name}."
+#   end
+
+#   def show_team
+#     puts "Team: #{@name}"
+#     @players.each { |player| player.display }
+#   end
+# end
+
+# player = Player.new("Charles")
+# player1 = Player.new("Damen")
+
+
+# team =Team.new("Ruby Rockets")
+# team.add_player(player)
+# team.add_player(player1)
+
+# team.show_team
+
+#=========================================
+#AGREGATION EXERCISE
+# Task: Create classes to model a Computer composed of CPU, Memory, and Storage.
+# Instructions:
+# Define classes CPU, Memory, and Storage with simple methods.
+# Create a Computer class that composes these components.
+# Implement a method start_computer that calls methods from the components.
+
+# class CPU
+#   def start
+#     puts "Processor is warming up..."
+#   end
+# end
+
+# class Memory
+#   def ram
+#     puts "Space avaialble in memory"
+#   end
+# end
+
+# class Storage
+#   def store
+#     puts "Storage available for use"
+#   end
+# end
+
+# class Computer
+#   def initialize
+#     @cpu = CPU.new
+#     @memory = Memory.new
+#     @storage = Storage.new
+#   end
+
+#   def start_computer  #need to call methods using objects
+#     @cpu.start
+#     @memory.ram
+#     @storage.store
+#   end
+# end
+# # cpu = CPU.new
+# # cpu.start
+
+# # mem = Memory.new
+# # mem.ram
+
+# # storage = Storage.new
+# # storage.store
+
+# computer = Computer.new
+# computer.start_computer
+#===========================================================
+#SINGLETON PATTERN
+# private: Methods are oonly accessible within the class
+# protected: Methods are accessible within the class and its sub classes
