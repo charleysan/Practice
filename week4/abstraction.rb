@@ -330,3 +330,11 @@
 #SINGLETON PATTERN
 # private: Methods are oonly accessible within the class
 # protected: Methods are accessible within the class and its sub classes
+
+
+
+
+#git clone url line
+# git branch feature/<NameOfBranch>
+# git checkout feature/<NameOfBranch>
+# then git add., git commit etc
